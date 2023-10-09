@@ -29,16 +29,18 @@ router.get('/:id',(req, res)=>{
 //Insert de un equipo
 
 router.post('/', (req, res)=>{
-    const{nombre, logo} = req.body
+    const{nombre, logo} = req.body;
 
-    let sql = `INSERT INTO tb_equipo(nombre, logo) VALUES ('${nombre}', '${logo}')`
+    let sql = `INSERT INTO tb_equipo(nombre, logo) VALUES ('${nombre}', '${logo}')`;
     conexion.query(sql, (err, rows, fields)=>{
-        if(err) throw err
-        else{
-            res.json({status: 'Equipo Agregado: '})
+        if(err){
+            console.error(err);
+            res.status(500).json({error: 'Error al insertar equipo'});
+        }else{
+            res.json({status: 'Equipo Agregado: '});
         }
-    })
-})
+    });
+});
 
 // Delete de un equipo
 

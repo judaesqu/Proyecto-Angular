@@ -9,7 +9,7 @@ const routes: Routes = [
   {path: 'inicio', component: InicioComponent},
   {path: 'add', component: AgregarComponent},
   {path:'edit/:id', component:ModificarComponent}
-];
+  ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
