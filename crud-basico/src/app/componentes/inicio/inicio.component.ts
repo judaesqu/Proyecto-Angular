@@ -18,7 +18,7 @@ export class InicioComponent implements OnInit {
   constructor(private EquipoService:EquipoService, private router:Router){}
 
   ngOnInit(): void{
-    this.listarEquipo();
+   this.listarEquipo();
   }
 
   listarEquipo()

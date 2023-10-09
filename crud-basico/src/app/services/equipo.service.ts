@@ -16,7 +16,7 @@ export class EquipoService {
 
   getEquipos(){
     console.log('OK');
-    return this.http.get(`http:localhost:3000/api/`);
+    return this.http.get(`http://localhost:3000/api/`);
   }
 
   //Traer un equipo
